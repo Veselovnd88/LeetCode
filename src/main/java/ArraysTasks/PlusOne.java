@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysTasks;
 
 import java.math.BigInteger;
 

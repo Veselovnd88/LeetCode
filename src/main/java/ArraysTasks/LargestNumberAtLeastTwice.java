@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysTasks;
 
 public class LargestNumberAtLeastTwice {
 /*You are given an integer array nums where the largest integer is unique.
