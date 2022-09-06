@@ -1,6 +1,7 @@
 import ArraysTasks.DiagonalOrderTwoDimensional;
 import ArraysTasks.PascalTriangle;
 import ArraysTasks.SpiralArray;
+import StringTasks.SumBinary;
 
 import java.util.Arrays;
 
@@ -18,9 +19,9 @@ public class Main {
         }
 
         System.out.println("-------------------");
-        PascalTriangle pt = new PascalTriangle();
+        SumBinary sumBinary = new SumBinary();
 
-        System.out.println(pt.generate(5));
+        System.out.println(sumBinary.addBinary("1010","1011"));
 
 
     }
