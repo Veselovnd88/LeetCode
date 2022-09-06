@@ -1,4 +1,5 @@
 import ArraysTasks.DiagonalOrderTwoDimensional;
+import ArraysTasks.PascalTriangle;
 import ArraysTasks.SpiralArray;
 
 import java.util.Arrays;
@@ -13,12 +14,13 @@ public class Main {
                 matrix[i][j]=x;
                 x++;
             }
-            System.out.println(Arrays.toString(matrix[i]));
+            //System.out.println(Arrays.toString(matrix[i]));
         }
 
         System.out.println("-------------------");
-        SpiralArray sa = new SpiralArray();
-        System.out.println(sa.solve(matrix));
+        PascalTriangle pt = new PascalTriangle();
+
+        System.out.println(pt.generate(5));
 
 
     }
