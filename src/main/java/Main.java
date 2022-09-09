@@ -1,10 +1,5 @@
-import ArraysTasks.DiagonalOrderTwoDimensional;
-import ArraysTasks.PascalTriangle;
-import ArraysTasks.SpiralArray;
-import StringTasks.CommonPrefix;
-import StringTasks.ReverseTwoPointers;
-import StringTasks.StrStrImpl;
-import StringTasks.SumBinary;
+import TwoPointers.ArrayPartition;
+import TwoPointers.ReverseTwoPointers;
 
 import java.util.Arrays;
 
@@ -22,11 +17,8 @@ public class Main {
         }
 
         System.out.println("-------------------");
-        ReverseTwoPointers reverseTwoPointers = new ReverseTwoPointers();
-        char[] testArr = new char[]{'a','b'};
-        System.out.println(Arrays.toString(testArr));
-        reverseTwoPointers.reverseString(testArr);
-        System.out.println(Arrays.toString(testArr));
+        ArrayPartition arrayPartition = new ArrayPartition();
+        System.out.println(arrayPartition.arrayPairSum(new int[]{6,2,6,5,1,2}));
 
 
     }
