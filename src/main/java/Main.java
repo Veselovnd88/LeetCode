@@ -1,6 +1,8 @@
 import ArraysTasks.DiagonalOrderTwoDimensional;
 import ArraysTasks.PascalTriangle;
 import ArraysTasks.SpiralArray;
+import StringTasks.CommonPrefix;
+import StringTasks.StrStrImpl;
 import StringTasks.SumBinary;
 
 import java.util.Arrays;
@@ -19,9 +21,9 @@ public class Main {
         }
 
         System.out.println("-------------------");
-        SumBinary sumBinary = new SumBinary();
+        CommonPrefix commonPrefix = new CommonPrefix();
 
-        System.out.println(sumBinary.addBinary("1010","1011"));
+        System.out.println(commonPrefix.longestCommonPrefix(new String[]{"c","acc","ccc"}));
 
 
     }
