@@ -1,5 +1,6 @@
 import TwoPointers.ArrayPartition;
 import TwoPointers.ReverseTwoPointers;
+import TwoPointers.SumOfTwo;
 
 import java.util.Arrays;
 
@@ -15,11 +16,8 @@ public class Main {
             }
             //System.out.println(Arrays.toString(matrix[i]));
         }
-
-        System.out.println("-------------------");
-        ArrayPartition arrayPartition = new ArrayPartition();
-        System.out.println(arrayPartition.arrayPairSum(new int[]{6,2,6,5,1,2}));
-
+        SumOfTwo sumOfTwo = new SumOfTwo();
+        System.out.println(Arrays.toString(sumOfTwo.twoSum(new int[]{1,2,3,4,5},7)));
 
     }
 }
