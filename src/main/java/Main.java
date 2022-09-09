@@ -2,6 +2,7 @@ import ArraysTasks.DiagonalOrderTwoDimensional;
 import ArraysTasks.PascalTriangle;
 import ArraysTasks.SpiralArray;
 import StringTasks.CommonPrefix;
+import StringTasks.ReverseTwoPointers;
 import StringTasks.StrStrImpl;
 import StringTasks.SumBinary;
 
@@ -21,9 +22,11 @@ public class Main {
         }
 
         System.out.println("-------------------");
-        CommonPrefix commonPrefix = new CommonPrefix();
-
-        System.out.println(commonPrefix.longestCommonPrefix(new String[]{"c","acc","ccc"}));
+        ReverseTwoPointers reverseTwoPointers = new ReverseTwoPointers();
+        char[] testArr = new char[]{'a','b'};
+        System.out.println(Arrays.toString(testArr));
+        reverseTwoPointers.reverseString(testArr);
+        System.out.println(Arrays.toString(testArr));
 
 
     }
