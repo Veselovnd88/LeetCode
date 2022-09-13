@@ -1,7 +1,4 @@
-import TwoPointers.ArrayPartition;
-import TwoPointers.RemoveInPlace;
-import TwoPointers.ReverseTwoPointers;
-import TwoPointers.SumOfTwo;
+import TwoPointers.*;
 
 import java.util.Arrays;
 
@@ -17,11 +14,11 @@ public class Main {
             }
             //System.out.println(Arrays.toString(matrix[i]));
         }
-        RemoveInPlace removeInPlace = new RemoveInPlace();
+        MaxConsecutiveOnes maxConsecutiveOnes = new MaxConsecutiveOnes();
 
-        int[] ints = {1, 2, 3, 4, 4, 4, 5, 6, 7};
-        System.out.println(removeInPlace.removeElement(ints,4));
-        System.out.println(Arrays.toString(ints));
+        int[] ints = {1, 1, 0, 1};
+        System.out.println(maxConsecutiveOnes.findMaxConsecutiveOnes(ints));
+
 
     }
 }
