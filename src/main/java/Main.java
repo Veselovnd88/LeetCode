@@ -1,4 +1,5 @@
 import TwoPointers.ArrayPartition;
+import TwoPointers.RemoveInPlace;
 import TwoPointers.ReverseTwoPointers;
 import TwoPointers.SumOfTwo;
 
@@ -16,8 +17,11 @@ public class Main {
             }
             //System.out.println(Arrays.toString(matrix[i]));
         }
-        SumOfTwo sumOfTwo = new SumOfTwo();
-        System.out.println(Arrays.toString(sumOfTwo.twoSum(new int[]{1,2,3,4,5},7)));
+        RemoveInPlace removeInPlace = new RemoveInPlace();
+
+        int[] ints = {1, 2, 3, 4, 4, 4, 5, 6, 7};
+        System.out.println(removeInPlace.removeElement(ints,4));
+        System.out.println(Arrays.toString(ints));
 
     }
 }
