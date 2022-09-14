@@ -1,3 +1,4 @@
+import ArraysTasks.RotateArray;
 import TwoPointers.*;
 
 import java.util.Arrays;
@@ -14,10 +15,10 @@ public class Main {
             }
             //System.out.println(Arrays.toString(matrix[i]));
         }
-        MinimumSizeSubArray minimumSizeSubArray = new MinimumSizeSubArray();
-
-        int[] ints = {1,2,3,4,5};
-        System.out.println(minimumSizeSubArray.minSubArrayLen(15,ints));
+        RotateArray rotateArray = new RotateArray();
+        int[] ints = {1,2,3,4};
+        rotateArray.rotate(ints,6);
+        System.out.println(Arrays.toString(ints));
 
 
     }
