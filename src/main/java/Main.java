@@ -14,10 +14,10 @@ public class Main {
             }
             //System.out.println(Arrays.toString(matrix[i]));
         }
-        MaxConsecutiveOnes maxConsecutiveOnes = new MaxConsecutiveOnes();
+        MinimumSizeSubArray minimumSizeSubArray = new MinimumSizeSubArray();
 
-        int[] ints = {1, 1, 0, 1};
-        System.out.println(maxConsecutiveOnes.findMaxConsecutiveOnes(ints));
+        int[] ints = {1,2,3,4,5};
+        System.out.println(minimumSizeSubArray.minSubArrayLen(15,ints));
 
 
     }
