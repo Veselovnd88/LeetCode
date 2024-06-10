@@ -3,6 +3,8 @@ package problems;
 /**
  * @author VeselovND <br>
  * created at 10.06.2024 <br>
+ * <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/">
+ * Lowest Common Ancestor of a Binary Search Tree</a>
  */
 public class LowestCommonAncestorOfABinarySearchTree {
 
