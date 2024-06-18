@@ -30,6 +30,11 @@ public class AddBinary {
             left = a;
             right = b;
         }
+        StringBuilder sb = sum(left, right);
+        return sb.toString();
+    }
+
+    private static StringBuilder sum(String left, String right) {
         boolean add = false;
         StringBuilder sb = new StringBuilder();
         for (int i = left.length() - 1; i >= 0; i--) {
@@ -60,7 +65,7 @@ public class AddBinary {
         if (add) {
             sb.insert(0, '1');
         }
-        return sb.toString();
+        return sb;
     }
 
     private static String addLeadingZeros(String str, int qnt) {
