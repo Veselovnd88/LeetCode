@@ -35,6 +35,11 @@ public class InsertInterval {
 
         //System.out.println(Arrays.deepToString(insert(intervals5, newInterval5)));
 
+        int[][] intervals6 = new int[][]{{1, 5}};
+        int[] newInterval6 = new int[]{6, 8};
+
+        //System.out.println(Arrays.deepToString(insert(intervals5, newInterval5)));
+
 
     }
 
