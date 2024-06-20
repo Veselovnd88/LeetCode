@@ -39,73 +39,26 @@ public class InsertInterval {
     }
 
     public static int[][] insert(int[][] intervals, int[] newInterval) {
-        int[] starts = new int[intervals.length];
-        int[] ends = new int[intervals.length];
-        if (intervals.length == 0) {
-            int[][] ints = new int[1][2];
-            ints[0] = newInterval;
-            return ints;
+        int i = 0;
+        int n = intervals.length;
+        List<int[]> intervalsList = new ArrayList<>();
+        //сначала собираем интервалы которые не пересекаются хвостом с началом
+        while (i < n && intervals[i][1] < newInterval[0]) {
+            intervalsList.add(intervals[i++]);
         }
-        for (int i = 0; i < intervals.length; i++) {
-            starts[i] = intervals[i][0];
-            ends[i] = intervals[i][1];
+        while (i < n && intervals[i][0] <= newInterval[1]) { //здесь мы смотрим интервалы которые пересекаются
+            //до тех пор пока не начнутся те интервалы у которых хвост больше чем голова нового
+            //расширяем интервал, голова - наименьший (либо интервал, либо новый)
+            newInterval[0] = Math.min(intervals[i][0], newInterval[0]);
+            newInterval[1] = Math.max(intervals[i][1], newInterval[1]);
+            i++;
         }
+        intervalsList.add(newInterval);
 
-
-        int start = newInterval[0];
-        int end = newInterval[1];
-
-        int left = 0;
-        int right = ends.length;
-
-        if (intervals.length > 1) {
-            while (left <= right) {
-                int mid = left + (right - left) / 2;
-                if (start < ends[mid]) {
-                    right = mid - 1;
-                } else {
-                    left = mid + 1;
-                }
-            }
+        while (i < n) {
+            intervalsList.add(intervals[i++]);
         }
-        //нахожу индекс интервала, который заканчивается числом БОЛЬШИМ чем начало нового интервала
-        System.out.println("LEFT " + left);
-
-        System.out.println(Arrays.toString(ends));
-
-        //копируем всё до начала внесения нового интервала
-        List<int[]> fresh = new ArrayList<>();
-        for (int i = 0; i < left; i++) {
-            fresh.add(intervals[i]);
-        }
-        boolean isMerged = false;
-        if (intervals[left][1] < end && intervals[left][1] > start) {
-            intervals[left][1] = end;
-            isMerged = true;
-        } // продлили найденный интервал до конца нового интервала
-        fresh.add(intervals[left]);
-
-        for (int i = left; i < intervals.length; i++) {
-            //теперь нужно проверить начала следующих интервалов, если оно меньше чем конец - то меняем
-            if (intervals[i][0] < end && intervals[i][1] < end) {
-                continue;
-            }
-            if (intervals[i][0] <= end) {
-                intervals[left][1] = intervals[i][1];
-                isMerged = true;
-                continue;
-            }
-            fresh.add(intervals[i]);
-        }
-        if (!isMerged) {
-            fresh.add(newInterval);
-        }
-        int[][] newArray = new int[fresh.size()][2];
-
-        for (int i = 0; i < newArray.length; i++) {
-            newArray[i] = fresh.get(i);
-        }
-        return newArray;
+        return intervalsList.toArray(new int[intervalsList.size()][2]);
     }
 
 }
